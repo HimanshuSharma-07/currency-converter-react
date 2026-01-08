@@ -7,6 +7,7 @@ const useCurrencyInfo = (currency) => {
         fetch(`https://api.exchangerate-api.com/v4/latest/${currency}`)
         .then((res) => res.json())
         .then((res) => setData(res[currency]))
+        console.log(data)
     }, [currency])
     return data
 }
